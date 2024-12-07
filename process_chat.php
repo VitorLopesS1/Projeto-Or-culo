@@ -3,9 +3,9 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Content-Type: application/json');
 
-    $logFile = __DIR__ . '\log.txt'; // Certifique-se de usar o caminho absoluto
+    $logFile = __DIR__ . '\log.txt'; 
 
-    // Registrar início da requisição
+   
     file_put_contents($logFile, "Nova requisição recebida.\n", FILE_APPEND);
 
     $question = trim($_POST['question'] ?? '');
@@ -19,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents($logFile, "Pergunta recebida: $question\n", FILE_APPEND);
 
     
-    $apiKey = 'sk-proj-LRoZPwmWUTp2rFBrkACIT3BlbkFJdcUbgpHcIXcqGgYo6WxQ'; 
+    $apiKey = 'sk-proj-LRoZPwmWUTp2rFBrkACIT3BlbkFJdcUbgpHcIXcqGgYo6WxQ
+'; 
 
     if (!$apiKey) {
         file_put_contents($logFile, "Erro: Chave da API não configurada.\n", FILE_APPEND);
