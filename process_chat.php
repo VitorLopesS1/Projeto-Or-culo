@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     file_put_contents($logFile, "Pergunta recebida: $question\n", FILE_APPEND);
 
-    // Configuração da chave da API
-    $apiKey = 'sk-proj-LRoZPwmWUTp2rFBrkACIT3BlbkFJdcUbgpHcIXcqGgYo6WxQ'; // Substitua pela sua chave API válida
+    
+    $apiKey = 'sk-proj-LRoZPwmWUTp2rFBrkACIT3BlbkFJdcUbgpHcIXcqGgYo6WxQ'; 
 
     if (!$apiKey) {
         file_put_contents($logFile, "Erro: Chave da API não configurada.\n", FILE_APPEND);
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    // Formatar o prompt para a API
+   
     $prompt = "Faça de conta que você é um oráculo e responda à seguinte pergunta: $question";
 
     $data = [
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'Content-Type: application/json',
         "Authorization: Bearer $apiKey",
     ]);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 15); // Adicionar tempo limite de 15 segundos
+    curl_setopt($ch, CURLOPT_TIMEOUT, 15);
 
     $response = curl_exec($ch);
 
