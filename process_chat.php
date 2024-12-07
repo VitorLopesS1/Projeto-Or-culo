@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $prompt = "Faça de conta que você é um oráculo e responda à seguinte pergunta: $question";
 
     $data = [
-        'model' => 'gpt-4', // Usando o modelo GPT-4
+        'model' => 'gpt-4', 
         'messages' => [['role' => 'user', 'content' => $prompt]],
     ];
 
