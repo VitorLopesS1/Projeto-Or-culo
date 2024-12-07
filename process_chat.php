@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents($logFile, "Pergunta recebida: $question\n", FILE_APPEND);
 
     // Configuração da chave da API
-    $apiKey = 'sk-9HNX9UZSdT4o3esJHOC2pxIv0JP8dCrzH8YeW50c1XT3BlbkFJhjIN-R1bO7etigMvcup3kBxCrxx-XtIUMl7YuTub0A'; // Substitua pela sua chave API válida
+    $apiKey = 'sk-proj-LRoZPwmWUTp2rFBrkACIT3BlbkFJdcUbgpHcIXcqGgYo6WxQ'; // Substitua pela sua chave API válida
 
     if (!$apiKey) {
         file_put_contents($logFile, "Erro: Chave da API não configurada.\n", FILE_APPEND);
